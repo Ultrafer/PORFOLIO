@@ -1,0 +1,127 @@
+/* ------------------------------------ *\
+    #DESIGN SYSTEM COLORS
+\* ------------------------------------ */
+
+/** PRIMARY COLORS **/
+/**
+    The three core purples are used across all our services, networks and offers.
+    They appear in backgrounds, text, the logo, and the Greater Than symbol.
+    One of the core purples should appear in layouts, either in a leading or supporting role.
+**/
+
+$purple-core:     #A100FF;
+$purple-core-2:   #7500C0;
+$purple-core-3:   #460073;
+
+
+
+/** ACCENT PURPLES **/
+/**
+    The five accent purples provide a harmonious extension of the core purples.
+    They always support the core purples and help broaden their range. Overall,
+    their use should be subordinate to the core purples.
+**/
+
+$purple-accent-1: #B455AA;
+$purple-accent-2: #B455AA;
+$purple-accent-3: #B455AA;
+$purple-accent-4: #B455AA;
+$purple-accent-5: #B455AA;
+
+
+
+/** SECONDARY COLORS **/
+/**
+    Use sparingly, as many of these colors do not pass accessibility testing.
+    The secondary colors add variety to the palette and help prevent “purple fatigue”
+    in our touchpoints. The use of secondary colors is not a requirement in layouts.
+    These colors are available as options to allow design variation and visual pacing.
+**/
+
+$blue:            #0041F0;
+$blue-light:      #00FFFF;
+$green:           #64FF50;
+$green-blue:      #05F0A5;
+$red:             #FF3246;
+$pink:            #FF50A0;
+$orange:          #FF7800;
+$yellow:          #FFEB32;
+
+
+
+/** NEUTRAL COLORS **/
+
+// 1) Grey UI
+/**
+    Complement the other colors in the palette and help provide a counterpoint
+    to the palette’s vibrancy when used in text, backgrounds and other foundational
+    design elements.
+**/
+
+$white:	          #FFF;
+$alabaster:	      #FAFAFA;
+$white-smoke:	  #F2F2F2;
+$gainsboro:	      #E5E5E5;
+$ghost:	          #CCCBCE;
+$grey-french:	  #B3B2B5;
+$topaz:	          #837F89;
+$gravel:	      #4F4B53;
+$grey-ship: 	  #3B3944;
+$bastille:        #1D1823;
+$black:           #000;
+
+// 2) Neutral Greys
+/**
+    Minimal -
+    Please use recommended grey UI palette above if necessary for websites and applications.
+**/
+
+$grey-light:      #E6E6DC;
+$grey-dark:       #96968C;
+
+
+
+/** STATUS COLORS (Error, Success, Warning, Info, etc) **/
+/**
+    Examples of status color usage are a completed action, error state, or any type of
+    “reaction” that occurs after a user completes or attempts to complete an action.
+    Use sparingly. Use grey for neutral or less important information.
+**/
+
+$error:           #E32739;
+$error-light:       $error;
+$error-dark:        $error;
+
+$success:         #4A8244;
+$success-light:     $success;
+$success-dark:      $success;
+
+$warning:         #BF5900;
+$warning-light:     $warning;
+$warning-dark:      $warning;
+
+
+/*** COLOR ALTERNATIONS **/
+
+$alternate-1:      #0C0C16;
+$alternate-2:      #EEEDED;
+
+
+$yellow:           #D7F712;
+
+/* ------------------------------------ *\
+    #ABSTRACTIONS
+\* ------------------------------------ */
+
+/** GENERIC **/
+
+$background:        $alternate-1;
+$text:              $alternate-2;
+
+
+/** LINKS COLORS **/
+
+$link:              inherit;
+$link-hover:        $yellow;
+$link-active:       $link-hover;
+$link-visited:      $link-hover;

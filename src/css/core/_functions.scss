@@ -1,0 +1,30 @@
+/* ------------------------------------ *\
+    #FUNCTIONS
+\* ------------------------------------ */
+
+// Convert px to rem
+@function rem($size) {
+	$remValue: $size / 16px;
+
+	@return #{$remValue}rem;
+}
+
+// Convert px to em
+@function em($size, $font-size) {
+	$emSize: $size / $font-size;
+
+	@return #{$emSize}em;
+}
+
+// Get percentage of column
+@function calculate-percent(
+	$columns,
+	$totalColumns
+) {
+	@return percentage(1/$totalColumns*$columns);
+}
+
+// Get value without unit
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}

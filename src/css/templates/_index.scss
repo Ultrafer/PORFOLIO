@@ -1,0 +1,154 @@
+@use '../core/color';
+@use '../core/font';
+@use '../core/spacing';
+@use '../core/breakpoint';
+@use '../core/mixins/normalize';
+@use '../core/functions' as *;
+
+.t-home {
+
+  // add extra padding for header
+  .hero,
+  .works {
+    .row {
+      padding-top: rem(72px); // header height
+    }
+  }
+
+  // Hero
+  .hero {
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      min-height: 100vh;
+      padding-bottom: rem(66px);
+    }
+
+    &__title {
+      max-width: rem(800px);
+      padding-top: rem(470px);
+
+      font-size: rem(48px);
+      line-height: 50px;
+      font-weight: normal;
+
+      a {
+        text-decoration: underline;
+
+        text-decoration-thickness: .02em;
+        text-underline-offset: 4px;
+      }
+    }
+
+    &__intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &-text {
+        max-width: rem(576px);
+      }
+
+      .skip {
+        i {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+
+// Works Fer
+
+  .works {
+
+
+  }
+
+  .workEntry{
+    min-height: 800px;
+    background-color:color.$yellow;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: rem(48px);
+
+    &_title{
+      grid-column: 1 / span 12;
+      padding-top: 90px;
+      padding-left: 35px;
+    }
+
+    &_description{
+      grid-column: 1 / span 4;
+      padding-left: 25px;
+    }
+
+  }
+
+
+
+  // Works Batidoro
+
+  /*.work {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: rem(48px);
+    // grid-template-rows: auto 1fr;
+    // grid-row-gap: 0px;
+
+    + .work {
+      margin-top: rem(224px);
+    }
+
+    &__info {
+      grid-column: 2 / span 4;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-link {
+        + * {
+          margin-top: rem(24px);
+        }
+      }
+    }
+
+    &__media {
+      grid-column: 7 / span 6;
+    }
+
+    &__pre-title {
+      font-size: 1rem;
+      font-weight: font.$weight-medium;
+      letter-spacing: -0.005em;
+
+      + * {
+        margin-top: 1rem;
+      }
+    }
+
+    &__title {
+      font-weight: normal;
+      font-size: rem(56px);
+      line-height: 1;
+      letter-spacing: -0.015em;
+    }
+
+    // everu 2 works
+    &:nth-child(even) {
+      .work {
+        &__media {
+          grid-column: 1 / span 6;
+        }
+
+        &__info {
+          grid-column: 8 / span 4;
+        }
+      }
+    }
+  }*/
+}

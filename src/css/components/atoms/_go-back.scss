@@ -1,0 +1,26 @@
+@use '../../core/color';
+@use '../../core/font';
+@use '../../core/functions' as *;
+
+.go-back {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  color: color.$text;
+  text-decoration: none;
+
+  i {
+    margin-right: rem(8px);
+    font-size: rem(20px);
+  }
+
+  // &:hover {
+  //   text-decoration: underline;
+
+  //   i {
+  //     &::before {
+  //       text-decoration: none;
+  //     }
+  //   }
+  // }
+}

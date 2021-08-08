@@ -1,0 +1,18 @@
+@use '../core/spacing';
+@use '../core/breakpoint';
+
+@use '../core/functions' as *;
+
+.row {
+  max-width: #{ spacing.$content-max-width +  spacing.$content-padding *2 };
+  padding: 0 spacing.$content-padding-xs;
+  margin: 0 auto;
+
+  @media ( min-width: rem( breakpoint.$md ) ) {
+    padding: 0 rem( spacing.$content-padding-sm );
+  }
+
+  @media ( min-width: rem( breakpoint.$lg ) ) {
+    padding: 0 rem( spacing.$content-padding );
+  }
+}

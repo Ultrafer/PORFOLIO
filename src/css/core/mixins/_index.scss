@@ -1,0 +1,259 @@
+/* ------------------------------------ *\
+    #MIXIN
+\* ------------------------------------ */
+
+/**
+ * Contents
+ *
+ * HELPERS
+ *
+ * TEXT
+ *
+ * LAYOUT
+ *
+ * BUTTONS
+ *
+ * INPUTS
+ * Text
+ *
+ * ICONS
+ *
+ * VISIBILITY
+ */
+ 
+/**
+ * LAYOUT
+ */
+
+/**
+ * BUTTONS
+ */
+
+@mixin normalize-button {
+	appearance: none;
+
+	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	max-width: 100%;
+	border: none;
+	padding: 0;
+	margin: 0;
+
+	background-color: transparent;
+
+	text-align: center;
+
+	cursor: pointer;
+	user-select: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:active {
+		outline: none;
+	}
+}
+
+/**
+ * FORMS
+ */
+
+@mixin normalize-form {
+	padding: 0;
+	margin: 0;
+}
+
+@mixin hide-input {
+	position: absolute;
+	width: 0;
+	height: 0;
+
+	opacity: 0;
+	cursor: pointer;
+}
+
+@mixin normalize-input-text {
+	appearance: none;
+
+	box-sizing: border-box;
+	width: 100%;
+
+	// Remove the margin in Firefox and Safari.
+	margin: 0;
+
+	// Show the overflow in Edge.
+	overflow: visible;
+
+	// Remove default styles
+	border: none;
+	// box-shadow: none !important;
+	box-shadow: none;
+
+	line-height: $line-height;
+	outline-offset: -2px;
+
+	&[type='search'] {
+		// Correct the odd appearance in Chrome and Safari.
+		appearance: none;
+
+		// Correct the outline style in Safari.
+		outline-offset: -2px;
+
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-decoration {
+			// Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+			-webkit-appearance: none;
+		}
+	}
+}
+
+@mixin normalize-list {
+	margin: 0;
+	// padding: 0;
+	padding-left: 0;
+
+	list-style: none;
+
+	> li {
+		margin-bottom: 0;
+	}
+}
+
+@mixin unstyled-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+
+
+@mixin normalize-fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+
+/**
+ * SELECT
+ */
+
+@mixin normalize-select {
+	appearance: none;
+	box-sizing: border-box;
+
+	// Remove the margin in Firefox and Safari.
+	margin: 0;
+	border: 0;
+
+	// box-shadow: none !important;
+
+	// Remove the inheritance of text transform in Edge, Firefox, and IE.
+	text-transform: none;
+}
+
+@mixin normalize-range {
+	appearance: none; /* Hides the slider so that custom slider can be made */
+	width: 100%; /* Specific width is required for Firefox. */
+	background: transparent; /* Otherwise white in Chrome */
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+	}
+
+	&:focus {
+		outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+	}
+
+	&::-ms-track {
+		width: 100%;
+		cursor: pointer;
+
+		/* Hides the slider so custom styles can be added */
+		background: transparent;
+		border-color: transparent;
+		color: transparent;
+	}
+}
+
+@mixin input-styles {
+	padding: rem(11px);
+	border: 1px solid #000;
+	border-radius: 2px;
+
+	font-size: rem(16px);
+	text-align: left;
+
+	&:focus {
+		outline: none;
+	}
+
+	// &::placeholder {
+	// 	color: #7F7F7F;
+	// }
+}
+
+/**
+ * ICONS
+ */
+
+// estilos por defecto de la tipografía de icono usada
+@mixin icon-font {
+	@extend %icon-font;
+}
+
+
+
+
+@mixin btn-icon ($icon, $size: 24px) {
+
+	&::before {
+		@include icon-font;
+		content: $icon;
+
+		display: block;
+		width: 1em;
+
+		text-align: center;
+        font-size: rem(24px);
+        //background-color: #fff;
+	}
+}
+
+// Mobile-first media query helper
+@mixin media($bp, $use-max-width: false) {
+	$delimiter: min-width;
+
+	@if $use-max-width {
+		$delimiter: max-width;
+		$bp: $bp - 1px; // restamos 1px al breakpoint ya que al usar max-width estamos diciendo que dichos estilos deberían suceder antes de llegar a dicho bp
+	}
+
+	// pasamos de px a rem por accesibilidad
+	$bp: rem($bp);
+
+	@media screen and (#{$delimiter}: #{$bp}) {
+		@content;
+	}
+}
+
+@mixin avoid-long-text($max-width) {
+	max-width: $max-width;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// avoid :after pseudo element to be orphan
+// https://stackoverflow.com/a/25857961/2656903
+@mixin pseudo-not-orphan($pseudo-width) {
+	display: inline-block;
+	padding-right: $pseudo-width;
+
+	&::after {
+		margin-right: -$pseudo-width;
+	}
+}

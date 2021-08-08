@@ -1,0 +1,11 @@
+@use '../../core/color';
+
+.link {
+  color: color.$link;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: color.$link-hover;
+  }
+}

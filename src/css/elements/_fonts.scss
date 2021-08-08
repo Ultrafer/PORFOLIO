@@ -1,0 +1,20 @@
+@use '../core/font';
+
+
+
+// Medium
+@font-face {
+	font-family: 'IBM Plex Sans', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+
+}
+
+// Regular
+// @font-face {
+// 	font-family: 'Moderat';
+//   font-stretch: normal;
+//   font-style: normal;
+// 	font-weight: normal;
+// 	src: url("#{font.$path}/Moderat-Regular.woff2") format('woff2');
+// }

@@ -1,0 +1,103 @@
+@use '../../core/color';
+@use '../../core/font';
+@use '../../core/transition';
+@use '../../core/functions' as *;
+
+.card {
+  position: relative;
+  display: block;
+  padding: rem(17px) rem(16px) rem(24px);
+  border: 1px solid color.$gainsboro;
+  overflow: hidden;
+
+  text-decoration: none;
+
+  border-radius: rem(4px);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.10);
+  
+  &,
+  &::before,
+  &__icon {
+    transition: all .3s transition.$sine-out;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    height: rem(4px);
+    transform-origin: top left;
+  }
+
+  // elements
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(48px);
+    height: rem(48px);
+    border-radius: rem(4px);
+    margin-bottom: 1rem;
+
+    background-color: color.$purple-core;
+
+    i {
+      display: block;
+      width: 1em;
+      font-size: rem(24px);
+      text-align: center;
+      color: color.$white;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(8px);
+    font-size: rem(20px);
+    line-height: font.$line-height-heading;
+    color: color.$black;
+  }
+
+  &__body {
+    font-size: rem(16px);
+    color: color.$bastille;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    transition: all .3s transition.$sine-out;
+  }
+
+  // modifiers
+  @mixin card-theme ($card-color: color.$purple-core) {
+    &::before,
+    .card__icon {
+      background-color: $card-color;
+    }
+  
+    &:hover {  
+      &::before,
+      .card__icon {
+        background-color: darken($card-color, 5%);
+      }
+    }
+  }
+  
+  &,
+  &--ui-interface {
+    @include card-theme(color.$purple-core);
+  }
+
+  &--architecture {
+    @include card-theme(color.$purple-core-2);
+  }
+
+  &--backend {
+    @include card-theme(rgba(color.$purple-core-3, .9));
+  }
+}
+

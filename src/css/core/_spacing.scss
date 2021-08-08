@@ -1,0 +1,54 @@
+/* ------------------------------------ *\
+    #SPACING
+\* ------------------------------------ */
+
+/** LAYOUT VARS **/
+/**
+  Se usa para dar espacio entre componentes
+**/
+
+$layout-xs:  8px;
+$layout-sm:  16px;
+$layout:     32px;
+$layout-lg:  64px;
+$layout-xl:  96px;
+
+
+
+/** SPACING VARS **/
+/**
+  Se usa para dar espacio entre elementos dentro de un componente
+ */
+$spacing-xs: 2px;
+$spacing-sm: 4px;
+$spacing:    8px;
+$spacing-lg: 16px;
+$spacing-xl: 24px;
+
+
+
+
+/* ------------------------------------ *\
+    #SPACING ABSTRACTIONS
+\* ------------------------------------ */
+
+/** GUTTER **/
+/**
+  Espaciado entre columnas de un grid
+**/
+
+$gutter-sm:  $layout-sm;
+$gutter:     $layout;
+$gutter-lg:  $gutter;
+
+
+
+/** CONTENT **/
+
+// 1) Width
+$content-max-width:  1600px;
+
+// 2) Padding
+$content-padding-xs: $layout-sm;
+$content-padding-sm: $layout;
+$content-padding:    48px;

@@ -1,0 +1,70 @@
+@use '../../core/color';
+@use '../../core/transition';
+@use '../../core/functions' as *;
+@use '../../core/mixins/normalize';
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  padding: rem(28px) 0;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: rem(19px)
+  }
+
+  &__nav {
+    ul {
+      @include normalize.list;
+      display: flex;
+    }
+
+    &-item {
+      position: relative;
+
+      + .header__nav-item { margin-left: rem(28px); }
+
+      &::after {
+        content: '';
+        
+        position: absolute;
+        bottom: - rem(2px);
+        left: 0;
+        
+        display: block;
+        width: 100%;
+        border-bottom: rem(2px) solid;
+
+        opacity: 0;
+        transform: scaleX(0) translateY(100%);
+        transform-origin: left bottom;
+        transition: transform .3s transition.$super-fast-out, opacity .15s transition.$quad-out;
+      }
+      
+      a {
+        display: block;
+        padding: 0 rem(4px);
+
+        font-size: rem(19px);
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &.is-active,
+      &:hover {
+        &::after {
+          opacity: 1;
+          transform: scaleX(1) translateY(100%);
+          transition: all .3s transition.$super-fast-out;
+        }
+      }
+    }
+  }
+}

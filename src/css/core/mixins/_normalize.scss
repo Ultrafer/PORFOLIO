@@ -1,0 +1,22 @@
+/* ------------------------------------ *\
+    #NORMALIZE MIXINS
+\* ------------------------------------ */
+
+@use '../color';
+
+@mixin button {
+  display: inline-block;
+  border: 0;
+  //background-color: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid color.$purple-core-3;
+  }
+}
+
+@mixin list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

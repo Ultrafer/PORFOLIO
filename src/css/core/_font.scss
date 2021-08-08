@@ -1,0 +1,29 @@
+/* ------------------------------------ *\
+    #TYPOGRAPHY
+\* ------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400&display=swap');
+
+/** FONT FILE **/
+
+$path: '../fonts/';
+$family: 'IBM Plex Sans', Arial, sans-serif;
+
+
+/** FONT PROPERTIES **/
+
+// 1) Sizing
+$base-size: 18px;
+
+// 2) Weights
+$weight-ultralight: 200;
+$weight-light: 300;
+$weight-regular: 400; // normal/book
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-black: 800;
+
+// 3) Line heights
+$line-height: 1.5;
+$line-height-heading: 1.25;

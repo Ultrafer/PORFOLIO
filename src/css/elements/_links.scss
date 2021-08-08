@@ -1,0 +1,13 @@
+@use '../core/color';
+
+a {
+  color: color.$link;
+  text-decoration: none;
+
+  transition: color .3s;
+
+  &:hover,
+  &:focus {
+    color: color.$link-hover;
+  }
+}

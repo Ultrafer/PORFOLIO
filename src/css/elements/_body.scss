@@ -1,0 +1,23 @@
+@use '../core/functions' as *;
+@use '../core/color';
+@use '../core/font';
+
+body {
+  background-color: color.$background;
+
+  font-family: font.$family;
+  font-size: rem( font.$base-size );
+  line-height: font.$line-height;
+  color: color.$text;
+
+  transition: color .35s ease-out, background-color .35s ease-out;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  // alternate colors when scrolling
+  &.theme-light {
+    background-color: color.$alternate-2;
+    color: color.$alternate-1;
+  }
+}

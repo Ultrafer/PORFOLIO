@@ -1,0 +1,26 @@
+@use "../core/functions" as *;
+@use '../core/font';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-weight: font.$weight-semibold;
+  line-height: font.$line-height-heading;
+}
+
+h1 {
+  font-size: rem(40px);
+}
+
+h2 {
+  font-size: rem(32px);
+}
+
+h3 {
+  font-size: rem(24px);
+}
