@@ -68,8 +68,8 @@
   }
 
   .workEntry{
-    min-height: 800px;
-    background-color:color.$yellow;
+
+
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -83,11 +83,24 @@
 
     &_description{
       grid-column: 1 / span 4;
+      padding-top: 22px;
       padding-left: 25px;
+    }
+
+    &_media {
+      padding-top: 45px;
+      grid-column: 3 / span 8;
     }
 
   }
 
+.BMW{
+  background-color:color.$yellow;
+}
+
+.MAYTEA{
+  background-color:color.$grey1;
+}
 
 
   // Works Batidoro

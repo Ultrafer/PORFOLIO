@@ -9,6 +9,12 @@
   ],
   "creatorBuild" : "34127",
   "files" : {
+    "\/dist" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/dist\/dist",
+      "oF" : 0
+    },
     "\/src\/css\/base\/_box-sizing.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -415,6 +421,32 @@
       "oA" : 0,
       "oAP" : "\/dist\/fonts\/Moderat-Regular.woff2",
       "oF" : 0
+    },
+    "\/src\/img\/bmw\/bmw_img_01.png" : {
+      "ft" : 32768,
+      "iS" : 936628,
+      "oA" : 0,
+      "oAP" : "\/dist\/img\/bmw\/bmw_img_01.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/src\/img\/bmw\/bmw_img_02.png" : {
+      "ft" : 32768,
+      "iS" : 999062,
+      "oA" : 0,
+      "oAP" : "\/dist\/img\/bmw\/bmw_img_02.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/src\/img\/img.jpg" : {
       "ft" : 16384,
