@@ -1,7 +1,9 @@
 @use '../core/color';
+@use '../core/breakpoint';
+@use '../core/font';
 
 a {
-  color: color.$link;
+  color: color.$link-hover;
   text-decoration: none;
 
   transition: color .3s;
@@ -9,5 +11,22 @@ a {
   &:hover,
   &:focus {
     color: color.$link-hover;
+  }
+
+  font-size: font.$link_size-mobile;
+}
+
+@media ( min-width: rem( breakpoint.$md ) ) {
+  a {
+    font-size: font.$link_size;
+    color: color.$link;
+  }
+
+}
+
+@media ( min-width: rem( breakpoint.$lg ) ) {
+  a {
+    font-size: font.$link_size;
+    color: color.$link;
   }
 }

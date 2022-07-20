@@ -33,11 +33,11 @@
 
       &::after {
         content: '';
-        
+
         position: absolute;
         bottom: - rem(2px);
         left: 0;
-        
+
         display: block;
         width: 100%;
         border-bottom: rem(2px) solid;
@@ -47,14 +47,11 @@
         transform-origin: left bottom;
         transition: transform .3s transition.$super-fast-out, opacity .15s transition.$quad-out;
       }
-      
+
       a {
         display: block;
-        padding: 0 rem(4px);
-
-        font-size: rem(19px);
+        padding: rem(5px) rem(4px);
         text-decoration: none;
-        color: inherit;
       }
 
       &.is-active,

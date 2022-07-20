@@ -19,5 +19,27 @@ body {
   &.theme-light {
     background-color: color.$alternate-2;
     color: color.$alternate-1;
+    a {
+      color: color.$link;
+    }
+    .header {
+      // background-color: color.$alternate-2;
+    }
   }
+
+  &.theme-maytea {
+    background-color: color.$yellow;
+    .header {
+      // background-color: color.$yellow;
+    }
+  }
+
+  &.theme-selecta {
+    background-color: color.$yellow;
+    .header {
+      // background-color: color.$yellow;
+    }
+  }
+
+
 }

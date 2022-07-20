@@ -20,41 +20,62 @@
     .row {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content:flex-end;
 
       min-height: 100vh;
+
       padding-bottom: rem(66px);
-    }
 
-    &__title {
-      max-width: rem(800px);
-      padding-top: rem(470px);
-
-      font-size: rem(48px);
-      line-height: 50px;
-      font-weight: normal;
-
-      a {
-        text-decoration: underline;
-
-        text-decoration-thickness: .02em;
-        text-underline-offset: 4px;
+      &__title {
+        max-width: rem(400px);
       }
+
+      @media ( min-width: rem( breakpoint.$md ) ) {
+
+        &__title {
+          max-width: rem(400px);
+        }
+
+      }
+
+      @media ( min-width: rem( breakpoint.$lg ) ) {
+
+        &__title {
+          max-width: rem(800px);
+        }
+
+      }
+
     }
+
+
 
     &__intro {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+      flex-direction: column;
+      // justify-content: space-between;
+      // align-items: flex-end;
 
       &-text {
+
+        padding-top: 22px;
         max-width: rem(576px);
+        display: none;
+
+        @media ( min-width: rem( breakpoint.$md ) ) {
+          display: block;
+          max-width: rem(500px);
+        }
+
+        @media ( min-width: rem( breakpoint.$lg ) ) {
+          display: block;
+        }
+
+
       }
 
-      .skip {
-        i {
-          margin-left: 1rem;
-        }
+      &-skip {
+        padding-top: 22px;
       }
     }
   }
@@ -69,99 +90,270 @@
 
   .workEntry{
 
-
-
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: rem(48px);
+    grid-column-gap: rem(20px);
 
     &_title{
       grid-column: 1 / span 12;
       padding-top: 90px;
-      padding-left: 35px;
+      padding-left: 10px;
     }
 
     &_description{
-      grid-column: 1 / span 4;
-      padding-top: 22px;
-      padding-left: 25px;
+      grid-column: 1 / span 12;
+      padding-top: 11px;
+      padding-left: 0px;
+
     }
 
     &_media {
       padding-top: 45px;
-      grid-column: 3 / span 8;
+      grid-column: 1 / span 12;
+    }
+
+
+    &_lasItem{
+      padding-bottom: 0px;
+    }
+
+    @media ( min-width: rem( breakpoint.$md ) ) {
+
+      grid-column-gap: rem(48px);
+
+      &_description{
+        grid-column: 1 / span 8;
+        padding-top: 22px;
+      }
+
+      &_media {
+        grid-column: 2 / span 10;
+      }
+
+      &_lasItem{
+        padding-bottom: 90px;
+      }
+    }
+
+    @media ( min-width: rem( breakpoint.$lg ) ) {
+
+      grid-column-gap: rem(48px);
+
+      &_description{
+        grid-column: 1 / span 4;
+        padding-top: 22px;
+      }
+
+      &_media {
+        grid-column: 3 / span 8;
+      }
+
+      &_lasItem{
+        padding-bottom: 90px;
+      }
+    }
+
+
+  }
+
+  .workEntryMasonry{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: repeat(12, 1fr);
+
+
+    &_title{
+      grid-column: 1 / span 12;
+      padding-top: 90px;
+      padding-left: 10px;
+    }
+
+    &_description{
+      grid-column: 1 / span 12;
+      padding-top: 11px;
+      padding-left: 0px;
+
+    }
+
+    &_media_left {
+      padding-top: 45px;
+      grid-column: 1 / span 12;
+    }
+
+    &_media_right {
+      padding-top: 45px;
+      grid-column: 1 / span 12;
+    }
+
+    @media ( min-width: rem( breakpoint.$md ) ) {
+
+      grid-column-gap: rem(48px);
+
+      &_description{
+        grid-column: 1 / span 8;
+        padding-top: 22px;
+      }
+
+      &_media_left {
+        padding-top: 45px;
+        grid-column: 2 / span 10;
+      }
+
+      &_media_right {
+        padding-top: 45px;
+        grid-column: 2 / span 10;
+      }
+
+      &_lasItem{
+        padding-bottom: 90px;
+      }
+    }
+
+    @media ( min-width: rem( breakpoint.$lg ) ) {
+
+      grid-column-gap: rem(48px);
+
+      &_description{
+        grid-column: 1 / span 4;
+        padding-top: 22px;
+      }
+
+      &_lasItem{
+        padding-bottom: 90px;
+      }
+
+      &_media_left {
+
+        grid-column: 2 / span 5;
+
+      }
+
+      &_media_right {
+
+        grid-column: 7 / span 5;
+
+      }
+
+      .rowUp{
+        grid-row: 3;
+      }
+
     }
 
   }
 
-.BMW{
-  background-color:color.$yellow;
-}
+// About
 
-.MAYTEA{
-  background-color:color.$grey1;
-}
+.about {
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    min-height: 100vh;
+    padding-bottom: rem(66px);
+  }
 
-  // Works Batidoro
+  &_title {
+    max-width: rem(800px);
+    padding-top: rem(200px);
 
-  /*.work {
+  }
+
+  &_linkmail{
+    padding-top: rem(22px);
+  }
+
+  &_info{
+
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: rem(48px);
-    // grid-template-rows: auto 1fr;
-    // grid-row-gap: 0px;
+    grid-column-gap: rem(20px);
 
-    + .work {
-      margin-top: rem(224px);
-    }
+    &_bio{
+      grid-column: 1 / span 12;
+      padding-top: 22px;
 
-    &__info {
-      grid-column: 2 / span 4;
+      &_links{
+        // display: flex;
+        // // flex-direction: column;
+        // justify-content: space-between;
+        font-size: font.$min_size;
+        padding-top: 45px;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      &-link {
-        + * {
-          margin-top: rem(24px);
-        }
-      }
-    }
-
-    &__media {
-      grid-column: 7 / span 6;
-    }
-
-    &__pre-title {
-      font-size: 1rem;
-      font-weight: font.$weight-medium;
-      letter-spacing: -0.005em;
-
-      + * {
-        margin-top: 1rem;
-      }
-    }
-
-    &__title {
-      font-weight: normal;
-      font-size: rem(56px);
-      line-height: 1;
-      letter-spacing: -0.015em;
-    }
-
-    // everu 2 works
-    &:nth-child(even) {
-      .work {
-        &__media {
-          grid-column: 1 / span 6;
+        a{
+          padding-right: 22px;
         }
 
-        &__info {
-          grid-column: 8 / span 4;
-        }
       }
+
     }
-  }*/
+
+    &_awards{
+      grid-column: 1 / span 12;
+      padding-top: 90px;
+    }
+
+    &_awards_dev{
+      grid-column: 1 / span 12;
+      padding-top: 22px;
+    }
+
+    &_caption{
+      color: color.$grey-dark;
+      padding-top:90px;
+    }
+
+    @media ( min-width: rem( breakpoint.$md ) ) {
+
+        grid-column-gap: rem(48px);
+
+        &_bio{
+          grid-column: 1 / span 12;
+
+        }
+
+        &_awards{
+          grid-column: 2 / span 4;
+          padding-top: 90px;
+
+        }
+
+        &_awards_dev{
+          grid-column: 6 / span 4;
+          padding-top: 90px;
+        }
+
+    }
+
+    @media ( min-width: rem( breakpoint.$lg ) ) {
+
+        grid-column-gap: rem(48px);
+
+        &_bio{
+          grid-column: 1 / span 4;
+
+        }
+
+        &_awards{
+          grid-column: 6 / span 3;
+          padding-top: 22px;
+        }
+
+        &_awards_dev{
+          grid-column: 9 / span 3;
+          padding-top: 22px;
+        }
+    }
+  }
+
+
+
+}
+
+
+.lit_txt{
+  font-size: font.$min_size;
+}
+
 }
